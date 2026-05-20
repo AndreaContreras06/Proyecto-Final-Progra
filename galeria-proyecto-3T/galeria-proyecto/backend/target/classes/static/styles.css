@@ -1,0 +1,134 @@
+:root {
+    --sc-bg:      #071018;
+    --sc-card:    #0f1720;
+    --sc-accent:  #e50914;
+    --sc-muted:   #9aa6b2;
+    --sc-border:  rgba(255,255,255,0.06);
+}
+
+body {
+    background: linear-gradient(180deg, #071019 0%, #0b0f12 100%);
+    min-height: 100vh;
+    color: #e6eef6;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+
+.navbar {
+    background: rgba(7, 16, 24, 0.95) !important;
+    border-bottom: 1px solid var(--sc-border);
+    backdrop-filter: blur(8px);
+}
+.navbar-brand .logo-box {
+    width: 36px; height: 36px;
+    background: var(--sc-accent);
+    border-radius: 4px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 18px; color: #fff;
+    margin-right: 10px;
+}
+.navbar-brand span { font-weight: 700; color: #e6eef6; }
+.navbar-text { font-size: 12px; color: var(--sc-muted) !important; }
+
+
+.form-control, .form-select {
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid var(--sc-border) !important;
+    color: #e6eef6 !important;
+}
+.form-control::placeholder { color: var(--sc-muted); }
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 .2rem rgba(229,9,20,.25) !important;
+}
+.form-select option { background: #0f1720; color: #e6eef6; }
+
+
+.btn-accent {
+    background: var(--sc-accent);
+    border-color: var(--sc-accent);
+    color: #fff;
+    font-weight: 600;
+}
+.btn-accent:hover { background: #c0070f; border-color: #c0070f; color: #fff; }
+.btn-outline-light:hover { background: rgba(255,255,255,0.08); }
+
+
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.04)) !important;
+    border: 1px solid var(--sc-border) !important;
+    border-radius: 8px !important;
+    transition: transform .18s ease, box-shadow .18s ease;
+    cursor: pointer;
+    color: #e6eef6 !important;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(2,6,12,.8) !important;
+}
+.card-img-placeholder {
+    height: 200px;
+    background: #0b0f12;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; color: var(--sc-muted);
+}
+.card-body { padding: 14px; }
+.card-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+.card-subtitle { color: var(--sc-muted) !important; font-size: 12px; margin-bottom: 8px; }
+.card-text { color: var(--sc-muted); font-size: 13px;
+             display: -webkit-box; -webkit-line-clamp: 3;
+             -webkit-box-orient: vertical; overflow: hidden; }
+
+
+.badge-anio {
+    background: rgba(229,9,20,.18);
+    color: var(--sc-accent);
+    border: 1px solid rgba(229,9,20,.3);
+    font-size: 11px; font-weight: 600;
+    padding: 3px 8px; border-radius: 20px;
+}
+
+
+.modal-content {
+    background: linear-gradient(180deg, #091018, #071018) !important;
+    border: 1px solid var(--sc-border) !important;
+    color: #e6eef6 !important;
+}
+.modal-header { border-bottom: 1px solid var(--sc-border) !important; }
+.modal-footer { border-top: 1px solid var(--sc-border) !important; }
+.btn-close { filter: invert(1); }
+
+
+.modal-body label { color: var(--sc-muted); font-size: 13px; }
+
+
+#status { color: var(--sc-muted); font-size: 13px; min-height: 20px; }
+
+
+.spinner-border { color: var(--sc-accent) !important; }
+
+
+.card-actions { display: flex; gap: 6px; margin-top: 10px; }
+.btn-sm-icon {
+    background: rgba(255,255,255,0.06); border: 1px solid var(--sc-border);
+    color: #e6eef6; border-radius: 6px; padding: 4px 10px;
+    font-size: 13px; cursor: pointer;
+}
+.btn-sm-icon:hover { background: rgba(255,255,255,0.12); }
+.btn-sm-icon.danger:hover { background: rgba(229,9,20,.2); border-color: var(--sc-accent); }
+
+
+body.page-registro {
+    display: flex; align-items: center; justify-content: center;
+}
+body.page-registro .card {
+    border-radius: 10px;
+    width: 100%; max-width: 440px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.6);
+}
+.logo-box {
+    width: 44px; height: 44px;
+    background: var(--sc-accent); border-radius: 6px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 22px; color: #fff;
+}
+.form-label { color: var(--sc-muted); font-size: 13px; margin-bottom: 4px; }

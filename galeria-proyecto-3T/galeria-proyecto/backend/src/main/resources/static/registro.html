@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro — Serie C</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-registro">
+<div class="card p-4">
+    <!-- Cabecera -->
+    <div class="d-flex align-items-center gap-3 mb-4">
+        <span class="logo-box">S</span>
+        <div>
+            <h4 class="mb-0 fw-bold">Crear cuenta</h4>
+            <small style="color:var(--sc-muted)">Serie C — Plataforma</small>
+        </div>
+    </div>
+
+    <!-- Formulario -->
+    <div id="formRegistro">
+        <div class="mb-3">
+            <label class="form-label" for="nombre">
+                <i class="bi bi-person me-1"></i>Nombre completo
+            </label>
+            <input id="nombre" type="text" class="form-control"
+                   placeholder="Tu nombre" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="correo">
+                <i class="bi bi-envelope me-1"></i>Correo electrónico
+            </label>
+            <input id="correo" type="email" class="form-control"
+                   placeholder="tu@correo.com" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="contrasena">
+                <i class="bi bi-lock me-1"></i>Contraseña
+                <span style="font-size:11px;">(mín. 6 caracteres)</span>
+            </label>
+            <div class="input-group">
+                <input id="contrasena" type="password" class="form-control"
+                       placeholder="••••••" minlength="6" required>
+                <button class="btn btn-outline-secondary" type="button" id="togglePass"
+                        style="border-color:var(--sc-border);background:rgba(255,255,255,0.04);color:#e6eef6;">
+                    <i class="bi bi-eye" id="eyeIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label" for="genero">
+                <i class="bi bi-tag me-1"></i>Género favorito
+            </label>
+            <select id="genero" class="form-select">
+                <option value="">— Todos —</option>
+                <option value="Terror">Terror</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                <option value="Acción">Acción</option>
+                <option value="Drama">Drama</option>
+                <option value="Intriga">Intriga</option>
+                <option value="Fantástico">Fantástico</option>
+                <option value="Thriller">Thriller</option>
+            </select>
+        </div>
+
+        <!-- Mensaje de error / éxito -->
+        <div id="mensaje" class="mb-3" style="font-size:13px; min-height:20px;"></div>
+
+        <button id="btnRegistrar" class="btn btn-accent w-100 mb-2">
+            <i class="bi bi-person-plus me-1"></i>Registrarse
+        </button>
+        <button id="btnVolver" class="btn btn-outline-light w-100">
+            <i class="bi bi-arrow-left me-1"></i>Volver a la galería
+        </button>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Lógica del registro -->
+<script src="registro.js"></script>
+</body>
+</html>
